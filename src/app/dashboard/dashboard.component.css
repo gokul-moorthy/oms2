@@ -1,0 +1,52 @@
+mat-card {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+.addbtn {
+    margin-bottom: 20px;
+}
+
+.mat-row {
+    height: auto;
+}
+
+.mat-cell {
+    padding: 8px 12px 8px 8px;
+    text-align: center;
+}
+
+.mat-header-cell{
+    text-align: center;
+    padding: 8px 12px 8px 8px;
+}
+
+@media (max-width: 576px) {
+    table {
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 992px) {
+    table {
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

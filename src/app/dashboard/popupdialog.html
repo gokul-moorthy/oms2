@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>{{ title }}</h1>
+<hr>
+ <div mat-dialog-content>
+    <form [formGroup]="orderform">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Customer Name" formControlName="customerName">
+            <mat-error *ngIf="submitted && f.customername.errors">
+                <div *ngIf="f.customername.errors.required">Customer name is required</div>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="number" placeholder="Phone no" formControlName="phoneno" minlength="10">
+            <mat-error *ngIf="submitted && f.phoneno.errors">
+                <div *ngIf="f.phoneno.errors.required">Phone Number is required</div>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="text" placeholder="Address" formControlName="address">
+            <mat-error *ngIf="submitted && f.address.errors">
+                <div *ngIf="f.address.errors.required">Address is required</div>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="date" placeholder="Due Date" formControlName="dueDate">
+            <mat-error *ngIf="submitted && f.dueData.errors">
+                <div *ngIf="f.dueDate.errors.required">Due date is required</div>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="number" placeholder="Total" formControlName="total">
+            <mat-error *ngIf="submitted && f.total.errors">
+                <div *ngIf="f.total.errors.required">Total is required</div>
+            </mat-error>
+        </mat-form-field>
+        <div>
+            <button mat-button (click)="onNoClick()">Close</button>
+            <div *ngIf="data.data.id; else elseblock" style="display: inline-block;">
+                <button mat-raised-button cdkFocusInitial color="primary" (click)="update()" >Update</button>
+            </div>
+            <ng-template #elseblock>
+                <button mat-raised-button cdkFocusInitial color="primary" (click)="create()" >Create</button>
+            </ng-template>
+        </div>
+    </form>
+</div>

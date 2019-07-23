@@ -1,0 +1,26 @@
+<mat-card>
+    <h2 class="text-center text-uppercase">Login</h2>
+    <hr>
+    <div *ngIf="submiterr" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <p>{{ submitmessage }}</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form [formGroup]="loginform" (submit)="login()">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Username" formControlName="username">
+            <mat-error *ngIf="submitted && f.username.errors">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password">
+            <mat-error *ngIf="submitted && f.password.errors">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+            </mat-error>
+        </mat-form-field>
+        <mat-checkbox formControlName="remember">Remember Me</mat-checkbox>
+        <button mat-raised-button type="submit" class="btn btn-primary bg-primary">Login</button>
+    </form>
+</mat-card>

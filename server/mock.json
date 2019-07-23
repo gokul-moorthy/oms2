@@ -1,0 +1,33 @@
+{
+    "user": {
+        "id": 10101,
+        "username": "test1",
+        "password": "test1"
+    },
+    "orders": [
+        {
+            "id": 101,
+            "dueDate": "1111-01-01",
+            "customerName": "Customer1",
+            "address": "Address1 Address1",
+            "phoneno": 1234567890,
+            "total": 100
+        },
+        {
+            "id": 102,
+            "dueDate": "2222-02-02",
+            "customerName": "Customer2",
+            "address": "Address2 Address2",
+            "phoneno": 1234567890,
+            "total": 200
+        },
+        {
+            "id": 103,
+            "dueDate": "3333-03-03",
+            "customerName": "Customer3",
+            "address": "Address3 Address3",
+            "phoneno": 1234567890,
+            "total": 300
+        }
+    ]
+}

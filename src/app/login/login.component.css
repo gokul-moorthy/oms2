@@ -1,0 +1,39 @@
+mat-card {
+    max-width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 30px;
+}
+
+mat-form-field {
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+}
+
+mat-checkbox {
+    display: block;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+    mat-card {
+        max-width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    mat-card {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 992px) {
+    mat-card {
+        max-width: 50%;
+        margin-left: 25%;
+    }
+}
